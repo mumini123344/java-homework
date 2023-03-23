@@ -69,7 +69,6 @@ public class Main {
         }
 
         while (j < subtractionResults.length){
-
             if (subtractionResults[j] % 2 == 0){
                 System.out.print(subtractionResults[j] + " is even, ");
             }else {
