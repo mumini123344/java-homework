@@ -1,7 +1,11 @@
 package ge.tbc.testautomation.javaoop.runners;
 
 import ge.tbc.testautomation.javaoop.figures.Circle;
+import ge.tbc.testautomation.javaoop.figures.Rectangle;
+import ge.tbc.testautomation.javaoop.figures.Triangle;
+import ge.tbc.testautomation.javaoop.util.HelperFunctions;
 import ge.tbc.testautomation.javaoop.util.Util;
+
 
 import java.util.Random;
 
@@ -11,6 +15,23 @@ public class Main {
 
         Random random = new Random();
 
+        Rectangle rectangle = new Rectangle(4, 5);
+        Triangle triangle = new Triangle(3, 6, 4);
+
+        System.out.println("Rectangle area: " + rectangle.getArea());
+        System.out.println("Rectangle perimeter: " + rectangle.getPerimeter());
+        System.out.println("Triangle area: " + triangle.getArea());
+        System.out.println("Triangle perimeter: " + triangle.getPerimeter());
+
+        //Bonus
+        System.out.println("--Bonus--");
+        Rectangle rec1 = new Rectangle(23, 9);
+        Rectangle rec2 = new Rectangle(17, 13);
+        HelperFunctions.compareRectangles(rec1, rec2);
+
+        System.out.println(); // კონსოლში დაპრინტვის დროს წინა მეთოდებისგან ადგილი როიყოს
+
+        // არვიცი ეს წინა თასკის მაგალითები უნდა დამეკომენტარებინა მთლიანად თუ არა ამიტო დავტოვე ასე როგორც არის
         System.out.println("--Number of instances--");
         Circle c1 = new Circle(3.0d);
         System.out.println(Circle.getNumberOfCircleInstances());
