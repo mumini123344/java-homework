@@ -51,15 +51,16 @@ public class MainTwo {
     }
     private static boolean phoneNumberValidation(String phoneNumber) {
         String phoneNumberPattern = "^(555|595|592|599){6}[0-9]$";
+        // chanacvleba vqna aq
         Pattern pattern = Pattern.compile(phoneNumberPattern);
-        Matcher matcher = pattern.matcher(phoneNumberPattern.replaceAll("-", ""));
+        Matcher matcher = pattern.matcher(phoneNumber.replaceAll("-", ""));
 
         if (matcher.matches()) {
             System.out.println(phoneNumber +  " Valid phone number");
         }else {
             System.out.println(phoneNumber + " Invalid phone number");
         }
-        return phoneNumber.matches(phoneNumberPattern);
+        return phoneNumber.matches(phoneNumber);
 
 
     }
