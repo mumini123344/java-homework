@@ -3,7 +3,7 @@ package ge.tbc.testautomation.javaoop.figures;
 import ge.tbc.testautomation.abstractClassesInterfaces.IResizableCircle;
 import ge.tbc.testautomation.abstractClassesInterfaces.IValidCircle;
 
-public class CircleAbstract extends FigureAbstract implements IResizableCircle, IValidCircle {
+public class CircleAbstract extends FigureAbstract implements IResizableCircle, IValidCircle, Comparable<CircleAbstract> {
 
     private double radius;
 
@@ -17,6 +17,14 @@ public class CircleAbstract extends FigureAbstract implements IResizableCircle, 
 
     public void setRadius(double radius) {
         this.radius = radius;
+    }
+
+
+    @Override
+    public String toString() {
+        return "CircleAbstract{" +
+                "radius=" + radius +
+                '}';
     }
 
     @Override
@@ -49,5 +57,17 @@ public class CircleAbstract extends FigureAbstract implements IResizableCircle, 
     public boolean validateCircle(CircleAbstract circleAbstract) {
         return circleAbstract.radius > 0;
         }
+
+
+    @Override
+    public int compareTo(CircleAbstract o) {
+        if (this.radius > o.getRadius()){
+            return 1;
+        }else if (this.radius < o.getRadius()){
+            return -1;
+        }else {
+            return 0;
+        }
+    }
 }
 
