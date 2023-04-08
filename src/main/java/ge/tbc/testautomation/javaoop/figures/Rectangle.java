@@ -9,6 +9,7 @@ public class Rectangle extends Figure{
         this.b = b;
     }
 
+
     public double getA() {
         return a;
     }
@@ -23,6 +24,14 @@ public class Rectangle extends Figure{
 
     public void setB(double b) {
         this.b = b;
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "a=" + a +
+                ", b=" + b +
+                '}';
     }
 
     @Override
